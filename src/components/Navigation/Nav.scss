@@ -1,0 +1,40 @@
+.gradient-text-logo, .gradient-text-creator{
+  background: linear-gradient(to right, crimson,pink,springgreen);
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  color:rgb(255, 255, 255);
+  display:block;
+  transition: color .2s ease-in-out;
+  text-transform:uppercase;
+  font-family: 'Roboto Slab', bold;
+
+
+  &:hover {
+    color:rgba(0,0,0,0);
+    cursor: pointer;
+  }
+}
+
+.gradient-text {
+  &-logo {
+    font-size: 30px;
+  }
+  &-creator {
+    span {
+      flex: 0 0 auto;
+    width: 100%;
+    }
+    
+  }
+}
+
+@keyframes rainbow { 
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
+}
+
+
+ 

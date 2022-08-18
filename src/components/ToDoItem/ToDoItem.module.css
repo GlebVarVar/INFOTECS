@@ -1,0 +1,76 @@
+.todoContainer{
+    background-color: rgba(27, 32, 36, 0.9);
+    width: 100%;
+    border-radius: 10px;
+    padding: 18px 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 1.5vh; 
+}
+
+.titleRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.categoriesRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:100%;
+    padding-left:30px;
+}
+
+.priorityRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width:100%;
+    padding-left:30px;
+    margin-top: 12px;
+}
+
+.titleText{
+    color: rgb(255, 255, 255) !important;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    line-height: 24px;
+    white-space: nowrap; /* Текст не переносится */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.removeBtn{
+    fill: rgb(255, 255, 255);
+    height: 16px;
+    width: 16px;
+    margin-right: 14px;
+    margin-top: 4px;
+}
+
+.checkbox{
+    margin-left: 14px;
+    margin-top: 4px;
+}
+
+.categoryText{
+    font-size: 12px;
+    color: rgb(255, 255, 255) !important;
+    font-weight:500;
+    margin-right: 5px;
+}
+
+
+.status{
+    color: rgb(255, 255, 255) ;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    display: inline-block;
+    height: auto;
+}
