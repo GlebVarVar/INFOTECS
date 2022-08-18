@@ -3,15 +3,19 @@ import Modal from 'react-bootstrap/Modal';
 import { FC } from 'react';
 
 interface DeleteTaskModalProps {
+  id: number;
   show: boolean;
   onHide: () => void;
   taskName: string;
+  onDelete: (id: number) => void;
 }
 
-const DeleteTaskModal: FC<DeleteTaskModalProps> = ({ show, onHide, taskName }) => {
+const DeleteTaskModal: FC<DeleteTaskModalProps> = ({ id, show, onHide, taskName, onDelete }) => {
 
-  const deleteTask = () => {
+  function onDeleteTask(e: React.MouseEvent<HTMLElement>, id: number){
+    e.preventDefault();
     onHide();
+    onDelete(id);
   }
 
 
@@ -36,7 +40,7 @@ const DeleteTaskModal: FC<DeleteTaskModalProps> = ({ show, onHide, taskName }) =
         <Button onClick={onHide}>
           Cancel
         </Button>
-        <Button onClick={deleteTask} variant="danger">
+        <Button onClick={(e) => onDeleteTask(e, id)} variant="danger">
           Delete
         </Button>
       </Modal.Footer>

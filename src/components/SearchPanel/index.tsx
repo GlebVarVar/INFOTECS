@@ -1,9 +1,16 @@
 import * as React from 'react';
 import Form from 'react-bootstrap/Form';
 import style from './SearchPanel.module.css';
+
+
+
+interface SearchPanelProps {
+  currentSearch: string,
+  setCurrentSearch: (search: string) => void,
+}
+
 // компонент для поиска задач
-const SearchPanel: React.FC = () => {
-  const [inputValue, setInputValue] = React.useState('');
+const SearchPanel: React.FC<SearchPanelProps> = ({currentSearch, setCurrentSearch}) => {
 
   return (
     <div className={style.search}>
@@ -11,8 +18,8 @@ const SearchPanel: React.FC = () => {
         type="search"
         placeholder="Search"
         className="me-2"
-        value={inputValue}
-        onChange={(e) => {setInputValue(e.target.value)}}
+        value={currentSearch}
+        onChange={(e) => {setCurrentSearch(e.target.value.toLowerCase())}}
       />
     </div>
   );

@@ -1,0 +1,32 @@
+.description {
+  align-items: center;
+  border: 4px solid #1b2024;
+  border-radius: 10px;
+  margin-top: 1.5vh;
+  background-color: rgba(27, 32, 36, 0.9);
+}
+
+.input {
+    background-color: rgba(27, 32, 36, 0.9);
+    color: white;
+    border: 4px solid white;
+}
+
+.todoContainerMain{
+  /* background-color: rgba(27, 32, 36, 0.9); */
+  width: 100%;
+  border-radius: 10px;
+  padding: 18px 16px;
+
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1.5vh; 
+}
+
+
+h3 {
+  color: white;
+}
